@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="description" content="Drawing Basic Shapes - Bars" />
+    <meta charset="utf-8">
+    <title>Drawing SVG Shapes with D3</title>
+    <script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    <script src="Scripts/jquery-1.6.2.js" type="text/javascript"></script>
+    <script src="Scripts/d3Bar.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <!-- Let's draw some shapes! -->
+    <!-- Now let's try that with D3 -->
+    <h3>D3 Bar</h3>
+    <div id="2D1M"></div>
+</body>
+<script type="text/javascript">
+    $(document).ready(function() {
+        var d3Chart = new D3Chart();
+
+        var dataDef = {
+            title: "US Population Chart",
+            xLabel: 'Year',
+            yLabel: 'Population (millions)',
+            labelFont: '19pt Arial',
+            dataPointFont: '10pt Arial',
+            dataPoints: [{
+                x: '1790',
+                y: 3.9
+            }, {
+                x: '1810',
+                y: 7.2
+            }, {
+                x: '1830',
+                y: 12.8
+            }, {
+                x: '1850',
+                y: 23.1
+            }, {
+                x: '1870',
+                y: 36.5
+            }, {
+                x: '1890',
+                y: 62.9
+            }, {
+                x: '1910',
+                y: 92.2
+            }, {
+                x: '1930',
+                y: 123.2
+            }, {
+                x: '1950',
+                y: 151.3
+            }, {
+                x: '1970',
+                y: 203.2
+            }, {
+                x: '1990',
+                y: 248.7
+            }, {
+                x: '2010',
+                y: 308.7
+            }]
+        };
+        d3Chart.render("#1D1M", dataDef);
+    });
+</script>
+
+</html>
