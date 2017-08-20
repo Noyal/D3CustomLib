@@ -1,3 +1,19 @@
 ﻿body {
-    background-color: #DD0505;
+    background-color: #F8F2F2;
+}
+
+.svgcolor {
+    fill: #ACB102;
+}
+
+.bar {
+    fill: steelblue;
+}
+
+.bar:hover {
+    fill: brown;
+}
+
+.axis--x path {
+    display: none;
 }
