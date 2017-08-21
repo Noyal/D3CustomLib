@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="description" content="Drawing Basic Shapes - Bars" />
+    <meta charset="utf-8">
+    <title>Drawing SVG Shapes with D3</title>
+    <script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="Scripts/glass-d3.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="Styles/Styles.css">
+
+</head>
+
+<body>
+    <!-- Let's draw some shapes! -->
+    <!-- Now let's try that with D3 -->
+
+    <div class="container-fluid">
+        <h1>Custom D3 Glass Lib</h1>
+        <p>Resize the browser window to see the effect.</p>
+        <div class="row">
+            <div class="col-sm-4" style="background-color:lavender;">
+                <h3>D3 Bar 1D1M</h3>
+                <div id="barchart1D1M"></div>
+            </div>
+            <div class="col-sm-4" style="background-color:lavender;">
+                <h3>D3 Bar 2D1M</h3>
+                <div id="barchart2D1M"></div>
+            </div>
+            <div class="col-sm-4" style="background-color:lavender;">
+                <h3>D3 Bar 2D1M1</h3>
+                <div id="barchart2D1M1"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4" style="background-color:lavender;">
+                <h3>D3 Bar 1D1MM</h3>
+                <div id="barchart1D1MM"></div>
+            </div>
+            <div class="col-sm-4" style="background-color:lavender;">
+                <h3>D3 Bar 2D1MM</h3>
+                <div id="barchart2D1MM"></div>
+            </div>
+            <div class="col-sm-4" style="background-color:lavender;">
+                <h3>D3 Line</h3>
+                <div id="linechart"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function() {
+        var d3Chart = new D3Chart();
+        var dataset = [5, 10, 15, 20, 25, 30, 35]
+        var ds = [5.5, 10.5, 15, 20, 25, 30]
+        yearlySales = [{
+            "Date": 1999,
+            "Imports": "15",
+            "Exports": "20"
+        }, {
+            "Date": 2008,
+            "Imports": "42",
+            "Exports": "115"
+        }, {
+            "Date": 2007,
+            "Imports": "29",
+            "Exports": "79"
+        }, {
+            "Date": 2009,
+            "Imports": "346",
+            "Exports": "324"
+        }, {
+            "Date": 2006,
+            "Imports": "44",
+            "Exports": "69"
+        }, {
+            "Date": 2010,
+            "Imports": "424",
+            "Exports": "503"
+        }, {
+            "Date": 2005,
+            "Imports": "28",
+            "Exports": "48"
+        }, {
+            "Date": 2011,
+            "Imports": "413",
+            "Exports": "603"
+        }, {
+            "Date": 2004,
+            "Imports": "34",
+            "Exports": "41"
+        }, {
+            "Date": 2012,
+            "Imports": "313",
+            "Exports": "517"
+        }, {
+            "Date": 2003,
+            "Imports": "21",
+            "Exports": "36"
+        }, {
+            "Date": 2013,
+            "Imports": "513",
+            "Exports": "615"
+        }, {
+            "Date": 2002,
+            "Imports": "18",
+            "Exports": "23"
+        }, {
+            "Date": 2014,
+            "Imports": "471",
+            "Exports": "766"
+        }, {
+            "Date": 2001,
+            "Imports": "17",
+            "Exports": "29"
+        }, {
+            "Date": 2015,
+            "Imports": "119",
+            "Exports": "181"
+        }, {
+            "Date": 2000,
+            "Imports": "25",
+            "Exports": "25"
+        }];
+
+        d3Chart.render("#barchart1D1M", dataset);
+        d3Chart.render("#barchart2D1M", ds);
+        d3Chart.render("#barchart2D1M1", ds);
+        d3Chart.render("#barchart1D1MM", dataset);
+        d3Chart.render("#barchart2D1MM", ds);
+        d3Chart.renderLine("#linechart", yearlySales);
+
+    });
+</script>
+
+</html>
